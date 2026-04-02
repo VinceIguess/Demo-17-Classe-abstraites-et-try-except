@@ -19,7 +19,7 @@ def calcul_moyenne_gestion_exception(p_data:list[dict]) :
     moy_simple:int = 0
     cpt:int = 0
     for e in p_data :
-        try:
+        try: #doit être dans la boucle 
             moy_simple += e['salaire']
             cpt += 1
         except Exception as er:
