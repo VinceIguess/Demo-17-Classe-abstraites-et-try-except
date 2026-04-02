@@ -42,6 +42,11 @@ class Vendeur(Employe):
     def __init__(self, p_nom, p_prenom, p_salaire_de_base, p_commission):
         super().__init__(p_nom, p_prenom, p_salaire_de_base)
         self.commission = p_commission
+    #Au bébut: pas de calculer_paie... donc Vendeur est une classe abstraite
+    
+    #On redéfinie la fonction calculer_paie -> Vendeur n'est plus ue classe abstraite
+    def calculer_paie(self):
+        return self.salaire + self.commission
     
 if __name__ == "__main__" :
     # on ne peut pas créer d'instances d'une classe contenant une méthode abstraite

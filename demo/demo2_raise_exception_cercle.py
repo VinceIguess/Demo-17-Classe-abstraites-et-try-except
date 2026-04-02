@@ -8,6 +8,15 @@ class cercle:
 
 
 
-
-c1 = cercle(-35)
-print(c1._rayon)
+try :    
+    c1 = cercle(-35)
+    print(c1._rayon)
+except ValueError:
+    print("Oops! Le rayon n'est pas valide")
+except TypeError as e:
+    print(f"Erreur de type : {e}")
+else: #exécuté si il n'y a pas d'exceptions
+    print("Yay, le rayon est valide!")
+    print(c1._rayon)
+finally:
+    print("bloc toujours exécuté")

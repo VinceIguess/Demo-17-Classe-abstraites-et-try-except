@@ -16,7 +16,17 @@ def calcul_moyenne_simple(p_data:list[dict]) :
 
 def calcul_moyenne_gestion_exception(p_data:list[dict]) :
     # même fonction, mais en gèrant les exceptions.
-    pass
+    moy_simple:int = 0
+    cpt:int = 0
+    for e in p_data :
+        try:
+            moy_simple += e['salaire']
+            cpt += 1
+        except Exception as er:
+            print(f"Erreur dans ligne {e}")
+            print(er)
+    moy_simple /= cpt
+    return moy_simple
 
 if __name__ == "__main__" : 
     moyenne = calcul_moyenne_simple(employes)

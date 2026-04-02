@@ -19,3 +19,4 @@ e = b["prenom"]
 
 # Soulève une exception ZeroDivisionError
 e = 2 / 0
+
